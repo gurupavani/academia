@@ -1,0 +1,120 @@
+.bill-payment-main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+}
+.bill-payment-container,
+.bill-select-container {
+  border: 1px solid #bbb;
+  border-radius: 7px;
+  box-shadow: 2px 2px 5px #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 15px;
+}
+.bill-select {
+  width: 500px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  border: 1px solid #111;
+  background: transparent;
+}
+.payment-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.payment-info-section {
+  padding-left: 45px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 7px;
+}
+.payment-info-section > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.payment-info-section > div > span:first-child {
+  font-size: 15px;
+  font-weight: bold;
+}
+.payment-info-section > div > span:last-child {
+  font-size: 14px;
+}
+.payment-selection-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.bill-select-container > span,
+.payment-info-container > span,
+.payment-selection-section > span {
+  font-size: medium;
+  font-weight: bold;
+}
+
+.bill-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.bill-checkbox > span {
+  font-size: 14px;
+}
+.payment-amount-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2px;
+  padding-left: 30px;
+}
+.payment-amount-section > input {
+  width: 500px;
+  height: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  border: 1px solid #111;
+}
+.payment-amount-section > span {
+  font-size: 12px;
+  font-weight: bold;
+  color: red;
+}
+.payment-final-amount-section {
+  display: inline-flex;
+  gap: 10px;
+}
+.payment-final-amount-section > span:first-child {
+  font-weight: bold;
+  font-size: medium;
+}
+.payment-final-amount-section > span:last-child {
+  font-size: 14px;
+}
+.payment-action-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}

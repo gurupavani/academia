@@ -1,0 +1,63 @@
+.bills-container{
+  border: 1px solid #bbb;
+  border-radius: 7px;
+  box-shadow: 2px 2px 5px #ccc;
+  padding: 15px;
+}
+.bills-btn-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 10px 0;
+}
+.bill-info-section {
+  padding: 10px 20px 10px 45px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 7px;
+}
+.bill-info-section > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.bill-info-section > div > span:first-child {
+  font-size: 15px;
+  font-weight: bold;
+}
+.bill-info-section > div > span:last-child {
+  font-size: 14px;
+}
+.bill-info-status {
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+  background-color: #ccc;
+  border-radius: 6px;
+  padding: 5px 7px;
+}
+.status-paid {
+  background-color: #47e447;
+}
+.status-unpaid {
+  background-color: orange;
+}
+.status-expire {
+  background-color: #ff4545;
+}
+.status-progess {
+  background-color: #379ff3;
+}
+.table-head-row{
+    background: #111 !important;
+}
+.table-head-cell{
+    color: #fff !important;
+}

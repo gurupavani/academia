@@ -1,0 +1,112 @@
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+.header-container {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  box-shadow: 5px 0 10px #222;
+  height: 80px;
+}
+.header-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  padding: 15px;
+}
+.header-user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  padding: 0 10px;
+}
+.header-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+.header-info-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+.header-info-email {
+  font-size: 13px;
+}
+.header-avatar {
+  border: 3px solid #eee;
+  color: #fff;
+}
+/* .body-container {
+  overflow-x: hidden;
+} */
+.nav-sidebar {
+  width: 180px;
+  background-color: #111;
+  box-shadow: 5px 0 10px #222;
+  color: #eee;
+  height: 100%;
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  padding-top: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nav-sidebar-main {
+  flex: auto;
+}
+.nav-list-icon{
+    color: #eee;
+}
+.nav-item-selected{
+    color: pink !important;
+}
+.nav-sidebar-bottom {
+  border-top: 1px solid #eee;
+  margin-bottom: 80px;
+  padding-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-custom-btn {
+  background-color: white;
+  color: #111;
+  border: none;
+  border-radius: 7px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: small;
+  box-shadow: 0 1px 1px 0 white;
+}
+.nav-custom-btn:hover {
+  box-shadow: 2px 2px 5px #ccc;
+}
+.main-container {
+  padding-left: 180px; /* Same as the width of the sidebar */
+  padding-top: 80px;
+}
+.main-body {
+  padding: 25px;
+}
