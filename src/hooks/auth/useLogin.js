@@ -14,8 +14,9 @@ export const useLogin = () => {
     const res = await getlogin(username, password);
     if (res) {
       if (res.user && res.status) {
-        updateLogin(true);
+        updateLogin(res.status);
         updateUser(res.data);
+        localStorage.setItem("sid", res.data.id);
         navigate("/bills");
       } else {
         setError(res.msg);

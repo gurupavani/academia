@@ -9,7 +9,7 @@ export const getlogin = async (username, password) => {
         password,
       },
       {
-        Headers: {
+        headers: {
           contentType: "application/json",
         },
       }
@@ -19,3 +19,20 @@ export const getlogin = async (username, password) => {
     console.log(error);
   }
 };
+
+export const logout=async(id)=>{
+  try {
+    const res = await axios.post(
+      "/auth/logout",
+      {id},
+      {
+        headers: {
+          contentType: "application/json",
+        },
+      }
+    );
+    return res.data;
+  } catch (error) {
+    return error.data
+  }
+}

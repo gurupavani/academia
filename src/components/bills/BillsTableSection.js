@@ -11,7 +11,7 @@ import React from "react";
 import BillTableItem from "./BillTableItem";
 
 const BillsTableSection = ({
-  data = [1, 2, 3, 4, 5],
+  data,
   selected,
   setSelected,
 }) => {
@@ -28,19 +28,14 @@ const BillsTableSection = ({
               <TableCell className="table-head-cell">Amount</TableCell>
               <TableCell className="table-head-cell">Bill Date</TableCell>
               <TableCell className="table-head-cell">Deadline</TableCell>
+              <TableCell className="table-head-cell">Status</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {data.map((billItem, i) => (
               <BillTableItem
                 key={i}
-                data={{
-                  id: billItem,
-                  description: "abcd efgj khgsj",
-                  amount: 1234,
-                  billDate: "23/03/23",
-                  deadline: "02/05/24",
-                }}
+                data={billItem}
                 selected={selected}
                 setSelected={setSelected}
               />

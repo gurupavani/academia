@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import BillHistoryTableItem from "./BillHistoryTableItem";
 
-const BillHistoryTable = ({ data = [1, 2, 3, 4, 5] }) => {
+const BillHistoryTable = ({ data }) => {
   return (
     <TableContainer component={Paper}>
       <Table>
@@ -26,12 +26,7 @@ const BillHistoryTable = ({ data = [1, 2, 3, 4, 5] }) => {
           {data.map((billItem, i) => (
             <BillHistoryTableItem
               key={i}
-              data={{
-                id: billItem,
-                description: "abcd efgj khgsj",
-                amount: 1234,
-                paymentDate: "23/03/23",
-              }}
+              data={billItem}
             />
           ))}
         </TableBody>

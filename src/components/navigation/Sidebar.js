@@ -1,6 +1,4 @@
-import {
-  Logout
-} from "@mui/icons-material";
+import { Logout } from "@mui/icons-material";
 import {
   List,
   ListItemButton,
@@ -10,12 +8,16 @@ import {
 import React from "react";
 import { bottomNavList, mainNavList } from "./navList";
 import { useNavigate } from "react-router-dom";
+import { useLogout } from "../../hooks/auth/useLogout";
 
 const Sidebar = () => {
   const navigate = useNavigate();
+  const { logoutUser } = useLogout();
   const handleNavList = (path) => {
     navigate(path);
   };
+
+  const handleLogout = () => logoutUser();
   const isActive = (path) => window.location.pathname === path;
   return (
     <div className="nav-sidebar">
@@ -40,7 +42,7 @@ const Sidebar = () => {
       {/* <Grow /> */}
       <div className="nav-sidebar-bottom">
         <div>
-          <button className="nav-custom-btn">
+          <button className="nav-custom-btn" onClick={handleLogout}>
             <Logout fontSize="small" />
             Logout
           </button>

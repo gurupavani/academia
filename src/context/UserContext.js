@@ -8,14 +8,11 @@ export const useUpdateUser = () => useContext(UserUpdateContext);
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+ 
 
   const updateUser = (temp) => setUser(temp);
 
-  useEffect(()=>{
-    if(localStorage.getItem("login")==="true" && localStorage.getItem("sid")){
-        // get student overview
-    }
-  },[])
+  
   return (
     <UserContext.Provider value={user}>
       <UserUpdateContext.Provider value={updateUser}>

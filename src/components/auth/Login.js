@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Input from "./Input";
-// import lgbg1 from "../../assets/login/login-bg-1.avif";
 import lgbg2 from "../../assets/login/login-bg-2.jpg";
-// import lgbg3 from "../../assets/login/login-bg-3.jpg";
 import { useLogin } from "../../hooks/auth/useLogin";
 
 const Login = () => {
@@ -47,7 +45,6 @@ const Login = () => {
     }
     let valid = true;
     for (const key of Object.keys(errs)) {
-      console.log(errs[key]);
       if (errs[key].length > 0) {
         valid = false;
         break;

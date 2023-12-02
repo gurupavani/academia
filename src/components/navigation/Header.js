@@ -9,10 +9,13 @@ import {
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../context/UserContext";
+import { useLogout } from "../../hooks/auth/useLogout";
 
 const Header = () => {
   const navigate = useNavigate();
   const user = useUser();
+  const {logoutUser}=useLogout()
+  
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleMenu = (event) => {
@@ -29,7 +32,7 @@ const Header = () => {
 
   const handleLogout = () => {
     handleClose();
-    navigate("/login");
+    logoutUser()
   };
   return (
     <div className="header-container">

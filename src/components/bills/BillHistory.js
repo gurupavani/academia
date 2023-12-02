@@ -1,14 +1,9 @@
 import { Close } from "@mui/icons-material";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  IconButton,
-} from "@mui/material";
+import { Dialog, DialogContent, DialogTitle, IconButton } from "@mui/material";
 import React from "react";
 import BillHistoryTable from "./BillHistoryTable";
 
-const BillHistory = ({ open, setOpen }) => {
+const BillHistory = ({ open, setOpen, data }) => {
   const handleClose = () => {
     setOpen(false);
   };
@@ -27,7 +22,28 @@ const BillHistory = ({ open, setOpen }) => {
         <Close />
       </IconButton>
       <DialogContent dividers>
-        <BillHistoryTable />
+        {data && data.length > 0 ? (
+          <BillHistoryTable data={data} />
+        ) : (
+          <div
+            style={{
+              height: "50px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <span
+              style={{
+                fontSize: "16px",
+                fontWeight: "bold",
+                color: "#ddd",
+              }}
+            >
+              No Data Available
+            </span>
+          </div>
+        )}
       </DialogContent>
     </Dialog>
   );
